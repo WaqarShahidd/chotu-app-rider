@@ -65,7 +65,7 @@ const RiderMarker = () => {
 const Status = () => {
   const { fontScale } = useWindowDimensions();
 
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
   const modalRef = useRef(null);
 
@@ -105,7 +105,7 @@ const Status = () => {
           paddingHorizontal: 20,
         }}
       >
-        <TouchableOpacity onPress={() => navigation.navigate("Menu")}>
+        <TouchableOpacity>
           <MaterialIcons name="menu" size={28} color="black" />
         </TouchableOpacity>
         <Text

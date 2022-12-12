@@ -17,24 +17,24 @@ const Navigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="FleetBottom"
+        initialRouteName="login"
         screenOptions={{
           headerShown: false,
           gestureEnabled: true,
           gestureDirection: "horizontal",
         }}
       >
-        {/* <Stack.Group>
+        <Stack.Group>
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="Bottom" component={BottomNavigator} />
           <Stack.Screen name="OrderDetail" component={OrderDetail} />
           <Stack.Screen name="Menu" component={Menu} />
           <Stack.Screen name="Shifts" component={Shifts} />
           <Stack.Screen name="Chat" component={ChatScreen} />
-        </Stack.Group> */}
+        </Stack.Group>
         <Stack.Group>
           <Stack.Screen name="FleetBottom" component={FleetManagerNavigator} />
-          <Stack.Screen name="AddShops" component={AddShops} />
+          {/* <Stack.Screen name="AddShops" component={AddShops} /> */}
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

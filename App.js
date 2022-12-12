@@ -4,7 +4,7 @@ import Navigator from "./src/navigation/Navigator";
 import Status from "./src/Rider/Screens/Status";
 
 export default function App() {
-  return <Status />;
+  return <Navigator />;
 }
 
 const styles = StyleSheet.create({
