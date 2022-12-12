@@ -130,15 +130,79 @@ const Shops = () => {
               })}
             </>
           ) : (
-            <View>
-              <Text>gsg</Text>
-            </View>
+            <>
+              {shopsData.map((_, index) => {
+                return (
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      height: 70,
+                      marginTop: 0,
+                      borderTopWidth: index === 0 ? 0 : 1,
+                      borderBottomWidth: 1,
+                      alignItems: "center",
+                      borderBottomColor: colors.borderColor,
+                      borderTopColor: colors.borderColor,
+                    }}
+                    key={index}
+                  >
+                    <View style={{ paddingRight: 10 }}>
+                      {/* <Image  /> */}
+                      <View
+                        style={{
+                          height: 50,
+                          width: 50,
+                          borderRadius: 14,
+                          backgroundColor: "grey",
+                        }}
+                      />
+                    </View>
+                    <View style={{ maxWidth: "80%" }}>
+                      <Text
+                        style={{
+                          fontWeight: sizes.semiBold,
+                          fontSize: 16 / fontScale,
+                          color: colors.textPrimary,
+                        }}
+                      >
+                        {_.title}
+                      </Text>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          paddingTop: 5,
+                        }}
+                      >
+                        <MaterialIcons
+                          name="place"
+                          color={"rgba(19, 26, 46, 0.4)"}
+                          size={16}
+                        />
+                        <Text
+                          ellipsizeMode="tail"
+                          numberOfLines={1}
+                          style={{
+                            fontWeight: "400",
+                            color: "rgba(19, 26, 46, 0.4)",
+                            fontSize: 14 / fontScale,
+                            paddingLeft: 5,
+                          }}
+                        >
+                          {_.address}
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                );
+              })}
+            </>
           )}
         </ScrollView>
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Room");
+            navigation.navigate("AddShops");
           }}
           style={styles.createButton}
         >

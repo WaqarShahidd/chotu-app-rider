@@ -167,6 +167,7 @@ const Status = () => {
         style={StyleSheet.absoluteFillObject}
         initialRegion={location}
         region={location}
+        showsUserLocation={true}
       >
         <Marker
           coordinate={location}

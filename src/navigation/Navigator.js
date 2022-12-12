@@ -10,28 +10,31 @@ import Menu from "../Rider/Screens/Menu";
 import Shifts from "../Rider/Screens/Shifts";
 import ChatScreen from "../Rider/Screens/ChatScreen";
 import FleetManagerNavigator from "./FleetManagerNavigator";
+import AddShops from "../Fleet Manager/AddShops";
 
 const Stack = createNativeStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
+        initialRouteName="FleetBottom"
         screenOptions={{
           headerShown: false,
           gestureEnabled: true,
           gestureDirection: "horizontal",
         }}
       >
-        <Stack.Group>
+        {/* <Stack.Group>
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="Bottom" component={BottomNavigator} />
           <Stack.Screen name="OrderDetail" component={OrderDetail} />
           <Stack.Screen name="Menu" component={Menu} />
           <Stack.Screen name="Shifts" component={Shifts} />
           <Stack.Screen name="Chat" component={ChatScreen} />
-        </Stack.Group>
+        </Stack.Group> */}
         <Stack.Group>
           <Stack.Screen name="FleetBottom" component={FleetManagerNavigator} />
+          <Stack.Screen name="AddShops" component={AddShops} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
