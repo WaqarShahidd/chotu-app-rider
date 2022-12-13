@@ -34,7 +34,7 @@ const Navigator = () => {
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen name="FleetBottom" component={FleetManagerNavigator} />
-          {/* <Stack.Screen name="AddShops" component={AddShops} /> */}
+          <Stack.Screen name="AddShops" component={AddShops} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
